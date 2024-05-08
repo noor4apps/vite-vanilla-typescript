@@ -24,3 +24,4 @@ In our case, we’ll export everything from the sub-directory called helpers
 
 ## Update or create vite.config.ts
 ## Update package.json commands
+add additional configuration so that the project will build as a library

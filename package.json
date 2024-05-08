@@ -19,5 +19,20 @@
   "devDependencies": {
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/src/index.d.ts",
+  "main": "./dist/vite-vanilla-typescript.umd.js",
+  "module": "./dist/vite-vanilla-typescript.es.js",
+  "exports": {
+    ".": {
+      "import": [
+        "./dist/vite-vanilla-typescript.es.js"
+      ],
+      "require": "./dist/vite-vanilla-typescript.umd.js"
+    },
+    "./package.json": "./package.json"
   }
 }
