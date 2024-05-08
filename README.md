@@ -17,3 +17,7 @@ Remove the following files as they are not needed in a NPM package:
 • main.ts
 • counter.ts
 Remove also the public directory and all its contents.
+
+## Add main entry index.ts file
+Add new new file under src/ called index.ts that export all the source code we want to exposes from our NPM package. 
+In our case, we’ll export everything from the sub-directory called helpers
