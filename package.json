@@ -1,12 +1,20 @@
 {
   "name": "vite-vanilla-typescript",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "clean": "rm -rf ./dist; rm -rf vite-vanilla-typescript-0.0.0.tgz; rm -rf ../vite-vanilla-typescript-0.0.0.tgz",
+    "build-types": "tsc --declaration --emitDeclarationOnly --outDir ./dist",
+    "build-lib": "vite build",
+    "build": "npm run clean && npm run build-lib && npm run build-types",
+    "pack": "npm pack; mv vite-vanilla-typescript-0.0.0.tgz ../vite-vanilla-typescript-0.0.0.tgz",
+    "all": "npm run build && npm run pack",
+    "pub": "npm publish --access public",
+    "pretty": "prettier -w \"./src/**/*.ts\"",
+    "preversion": "npm run clean",
+    "version": "npm run build",
+    "postversion": "npm run pack",
+    "version-patch": "npm version patch -m \"Patch version\""
   },
   "devDependencies": {
     "typescript": "^5.2.2",

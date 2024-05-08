@@ -21,3 +21,6 @@ Remove also the public directory and all its contents.
 ## Add main entry index.ts file
 Add new new file under src/ called index.ts that export all the source code we want to exposes from our NPM package. 
 In our case, we’ll export everything from the sub-directory called helpers
+
+## Update or create vite.config.ts
+## Update package.json commands
