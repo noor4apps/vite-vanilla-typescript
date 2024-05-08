@@ -10,6 +10,8 @@
     "pack": "npm pack; mv vite-vanilla-typescript-0.0.0.tgz ../vite-vanilla-typescript-0.0.0.tgz",
     "all": "npm run build && npm run pack",
     "pub": "npm publish --access public",
+    "test": "vitest run",
+    "test-watch": "vitest watch",
     "pretty": "prettier -w \"./src/**/*.ts\"",
     "preversion": "npm run clean",
     "version": "npm run build",
@@ -17,8 +19,11 @@
     "version-patch": "npm version patch -m \"Patch version\""
   },
   "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "jsdom": "^24.0.0",
     "typescript": "^5.2.2",
-    "vite": "^5.2.0"
+    "vite": "^5.2.0",
+    "vitest": "^1.6.0"
   },
   "files": [
     "dist"
